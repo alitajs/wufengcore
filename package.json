@@ -1,0 +1,49 @@
+{
+  "name": "@wufengteam/core",
+  "version": "2.7.14",
+  "description": "@wufengteam/core",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist", "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "father-build",
+    "format": "prettier --write .",
+    "pub": "pnpm build && npm publish",
+    "test": "umi-test",
+    "test:cov": "umi-test --collectCoverage",
+    "watch": "father-build -w"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ],
+    "printWidth": 80,
+    "proseWrap": "never",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@alita/joi": "^0.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "@umijs/test": "3.5.17",
+    "father-build": "^1.22.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.6.2",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "ts-node": "^10",
+    "typescript": "^4.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "xiaohuoni <xiaohuoni@gmail.com> (https://github.com/xiaohuoni)"
+  ]
+}
