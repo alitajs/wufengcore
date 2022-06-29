@@ -84,7 +84,9 @@ test('Components', () => {
         {
           label: '值改变时回调',
           value: 'onChange',
-          params: [{ title: '变化值', value: '$e.target.value$', name: 'vals' }],
+          params: [
+            { title: '变化值', value: '$e.target.value$', name: 'vals' },
+          ],
         },
       ],
       todoActionList: ['setMobileValue'],

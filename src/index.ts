@@ -34,33 +34,33 @@ export class WuFeng {
       return WuFeng.singletonInstance;
     }
   }
-  
+
   static singletonInstance: WuFeng;
   public subscriptions = {};
 
-  public emit = (type:string,val: any) => {
-    console.log(this.subscriptions)
-    if(!this.subscriptions[type]){
-      console.log('init subscriptions on emit')
+  public emit = (type: string, val: any) => {
+    console.log(this.subscriptions);
+    if (!this.subscriptions[type]) {
+      console.log('init subscriptions on emit');
 
-      this.subscriptions[type] = new Set<Subscription<any>>()
+      this.subscriptions[type] = new Set<Subscription<any>>();
     }
-      for (const subscription of this.subscriptions[type]) {
-        subscription(val);
-      }
+    for (const subscription of this.subscriptions[type]) {
+      subscription(val);
+    }
   };
 
-  public useSubscription = (type:string, callback: Subscription<any>) => {
+  public useSubscription = (type: string, callback: Subscription<any>) => {
     function subscription(val: any) {
       if (callback) {
         callback(val);
       }
     }
-    if(!this.subscriptions[type]){
-      console.log('init subscriptions on useSubscription')
-        this.subscriptions[type] = new Set<Subscription<any>>()
+    if (!this.subscriptions[type]) {
+      console.log('init subscriptions on useSubscription');
+      this.subscriptions[type] = new Set<Subscription<any>>();
     }
-    console.log( this.subscriptions)
+    console.log(this.subscriptions);
     this.subscriptions[type].add(subscription);
   };
 
