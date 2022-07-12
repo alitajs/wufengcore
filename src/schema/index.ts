@@ -190,6 +190,10 @@ const schemaComponent = Joi.object({
    * }
    */
   onlyChildren: Joi.array().items(Joi.string()),
+  /**
+   * 当前页面只允许放一个这个组件
+   */
+  onlyOnce: Joi.boolean(),
 }) as ObjectCustomSchema<Component>;
 
 const schemaFunction = Joi.object({
