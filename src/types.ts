@@ -186,6 +186,10 @@ export interface Component {
    * }
    */
    onlyChildren?: string[];
+   /**
+   * 当前页面只允许放一个这个组件
+   */
+  onlyOnce?:boolean,
 }
 
 export interface FunctionDefine {
