@@ -181,6 +181,15 @@ const schemaComponent = Joi.object({
    * }
    */
   onlyRoot: Joi.array().items(Joi.string()),
+  /**
+   * 标记当前容器只能放入的元素
+   * DForm 容器只能放入 "DFormCustom"
+   * {
+   *   type: "DForm",
+   *   onlyChildren: ["DFormCustom"]
+   * }
+   */
+  onlyChildren: Joi.array().items(Joi.string()),
 }) as ObjectCustomSchema<Component>;
 
 const schemaFunction = Joi.object({

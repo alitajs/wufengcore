@@ -1,6 +1,6 @@
 {
   "name": "@wufengteam/core",
-  "version": "2.7.16",
+  "version": "2.7.17",
   "description": "@wufengteam/core",
   "license": "MIT",
   "main": "dist/index.js",

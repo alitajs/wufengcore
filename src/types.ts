@@ -177,6 +177,15 @@ export interface Component {
    * }
    */
   onlyRoot?: string[];
+  /**
+   * 标记当前容器只能放入的元素
+   * DForm 容器只能放入 "DFormCustom"
+   * {
+   *   type: "DForm",
+   *   onlyChildren: ["DFormCustom"]
+   * }
+   */
+   onlyChildren?: string[];
 }
 
 export interface FunctionDefine {
