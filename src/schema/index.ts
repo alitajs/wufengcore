@@ -71,6 +71,10 @@ const schemaComponent = Joi.object({
    */
   type: Joi.string(),
   /**
+   * 别名，从 pc 组件到 h5 组件的映射名
+   */
+  alias: Joi.string(),
+  /**
    * 组件名称
    */
   label: Joi.string(),

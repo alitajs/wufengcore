@@ -66,6 +66,10 @@ export interface Component {
    */
   type: string;
   /**
+   * 别名，从 pc 组件到 h5 组件的映射名
+   */
+   alias?: string;
+  /**
    * 组件关联平台，这里定义的优先级最高
    */
   platform?: string;
